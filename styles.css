@@ -1,0 +1,549 @@
+/* COLORS */
+:root {
+  --main-bg-color: #cfe6d5;
+  --btn-color: #CDD1E7;
+  --hover-color: #bfc3dd;
+  --bg-opacity-1: rgba(255, 255, 255, 0.3);
+  --bg-opacity-2: rgba(255, 255, 255, 0.5);
+}
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* BUTTONS */
+.submit-button {
+  margin: 20px auto;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: 1.6px solid black;
+  background-color: var(--btn-color);
+}
+
+.submit-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* TYPO */
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-shadow: 4px 4px white;
+}
+
+h2 {
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+/* LAYOUT */
+#features-wrapper, #pricing-wrapper, #about-wrapper, #form-wrapper {
+  width: 80%;
+  margin: 200px auto;
+  padding: 60px;
+  background-color: var(--bg-opacity-1);
+  border-radius: 20px;
+}
+
+.header, #title-section, #features, #pricing, #about, #form {
+  display: flex;
+}
+
+.features-box, .pricing-item {
+  background-color: var(--bg-opacity-2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER /NAV BAR SECTION */
+#header-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  /* Mit diesem Code bleibt die Navbar beim Scrollen bestehen!
+  Da ({position: fixed;} und {display:flex;} leider NICHT gut zusammen gehen, ist diese Variante besser!): */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  height: 100%;
+}
+
+.nav-link:hover {
+  background-color: var(--btn-color);
+}
+
+/* Hamburger Menu */
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* TITLE SECTION */
+#title-section {
+  width: 95%;
+  margin: 200px auto;
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-text p {
+  background-color: var(--bg-opacity-2);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-align: left;
+}
+
+#title-headlines {
+  margin-bottom: 100px;
+}
+
+#title-text u {
+  text-decoration-thickness: 0.2rem;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  margin: 0 0 100px 40px;
+  border: 9px solid white;
+  border-radius: 50%;
+}
+
+#profile-pic:hover {
+  opacity: 0.7;
+}
+
+/* Features Section */
+#features {
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.features-box {
+  border-radius: 50px;
+  width: 35%;
+  margin: 20px auto;
+  text-align: left;
+  hyphens: auto;
+  padding: 40px 45px 40px 55px;
+}
+
+.features-heading {
+  padding-bottom: 8px;
+}
+
+.features-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+/* PRICING SECTION */
+#pricing {
+  justify-content: center;
+}
+
+.pricing-item {
+  width: 30%;
+  padding: 40px 0;
+  margin: 20px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.pricing-item h3 {
+  /* text-decoration: underline; */
+  background-color: rgba(207, 230, 213, 0.7);
+  width: 75%;
+  padding: 20px;
+  border-radius: 30px;
+  margin: 20px auto 0;
+}
+
+.pricing-item h2 {
+  margin: 50px auto;
+  text-decoration: none;
+}
+
+.pricing-item ul {
+  padding: 0 70px;
+  margin-bottom: 50px;
+  line-height: 1.5rem;
+  list-style-type: none;
+}
+
+.pricing-item hr {
+  margin: 10px;
+}
+
+/* ABOUT SECTION */
+#about {
+  margin: auto;
+  padding: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificate {
+  display: flex;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  width: 35%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 60px;
+  padding: 20px;
+  background-color: var(--bg-opacity-2);
+  border-radius: 50px;
+}
+
+.cert-image {
+  width: 60px;
+  height: 60px;
+  margin: auto 20px;
+}
+
+#cert-text {
+  text-align: justify;
+  word-break: manual;
+}
+
+/* MESSAGE SECTION */
+#form-wrapper {
+  margin-bottom: 100px;
+}
+
+#form {
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  margin: auto;
+}
+
+label, textarea {
+  margin: 25px 0 8px;
+}
+
+input {
+  padding: 5px;
+}
+
+/* FOOTER SECTION */
+footer {
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #5e5582;
+  text-decoration: none;
+  padding: 9px 10px;
+  border-radius: 50px;
+}
+
+/* IMPRESSUM.html */
+.impressum {
+  margin: 10% 20% 2%;
+}
+
+#imp-headline {
+  margin-bottom: 20px;
+}
+
+.impressum p, .impressum a {
+  text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: black;
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1115px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  #title-text p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  #title-section {
+    margin: 150px auto 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0 10px;
+    15px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  #features-wrapper, #pricing-wrapper, #about-wrapper, #form-wrapper {
+    width: 90%;
+    margin: 90px auto 20px;
+    padding: 40px 20px;
+  }
+
+  #features, #pricing {
+    flex-direction: column;
+  }
+
+  .features-box, .pricing-item {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  .pricing-item ul {
+    padding: 0 60px;
+    margin-bottom: 10px;
+  }
+
+  #cert-text {
+    text-align: left;
+  }
+
+  .certificate {
+    max-width: 80%;
+    min-width: 65%;
+  }
+}
+
+@media all and (max-width: 860px) {
+  #title-section {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  #title-headlines {
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    text-align: center;
+    text-shadow: 2.5px 2.5px white;
+  }
+
+  #profile-pic {
+    width: 180px;
+    height: 180px;
+    margin: 50px;
+  }
+
+  #features-wrapper, #pricing-wrapper, #about-wrapper, #form-wrapper {
+    width: 100%;
+    margin: 90px 0 20px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .features-box {
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .pricing-item {
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .features-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .certificate {
+    max-width: 100%;
+    min-width: 70%;
+  }
+
+  .certificate p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .cert-image {
+    max-width: 40px;
+    min-width: 25px;
+    max-height: 40px;
+    margin: auto 20px;
+  }
+
+  #form {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 481px) {
+  .header.scrolled {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  main {
+    height: 200vh;
+  }
+}
+
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #title-section {
+    margin: 80px auto 50px;
+  }
+
+  .pricing-item h2 {
+    margin: 30px auto;
+  }
+
+  .pricing-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .pricing-item ul {
+    padding: 0 40px;
+  }
+
+  #about {
+    padding: 20px;
+  }
+
+  #cert-text {
+    text-align: center;
+  }
+
+  .certificate {
+    max-width: 100%;
+    margin: 20px 0px;
+  }
+
+  /* PASTED from above */
+  h3 {
+    text-align: center;
+  }
+
+  p, #title-text p, #cert-text {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  #title-text u {
+    text-decoration: none;
+  }
+
+  .certificate .cert-title {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  /* HAMBURGER */
+  header ul {
+    align-items: center;
+  }
+
+  #header-img {
+    position: absolute;
+    top: 8px;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-bar {
+    display: none;
+    width: 100%;
+    height: 30px;
+  }
+
+  .nav-bar ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-bar ul li {
+    text-align: center;
+  }
+
+  .nav-bar ul li a {
+    padding: .3rem 1rem;
+  }
+
+  .nav-bar.active {
+    display: flex;
+  }
+}
